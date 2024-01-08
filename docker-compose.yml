@@ -1,0 +1,18 @@
+# services: Aquí defines los servicios de tu aplicación. En este caso, solo hay un servicio llamado web.
+services:
+  # web: Es el nombre del servicio.
+  web:
+    # build: .: Indica que la imagen del contenedor se debe construir a partir del Dockerfile ubicado en el directorio actual (.). Esto asume que tienes un Dockerfile en el directorio donde se encuentra tu archivo docker-compose.yml.
+    build: .
+    # ports: - "4321:4321": Mapea el puerto 4321 del contenedor al puerto 4321 de la máquina local. Esto significa que puedes acceder a tu aplicación en http://localhost:4321.
+    ports:
+      - "4321:4321"
+    # volumes: [...]: Define volúmenes para montar dentro del contenedor. Estos volúmenes están destinados a persistir datos más allá del ciclo de vida del contenedor. En este caso, se están montando varios directorios:
+    # ./:/app: Monta el directorio actual en el directorio /app del contenedor. Esto es útil para proporcionar acceso al código fuente de la aplicación y permitir cambios en tiempo real.
+    # /app/.tscache, /app/dist, /app/node_modules: Monta estos directorios específicos dentro del contenedor. Esto podría ser útil para persistir ciertos directorios generados o instalados por la aplicación.
+    volumes:
+      - "./:/app"
+      - "/app/.tscache"
+      - "/app/dist"
+      - "/app/node_modules"
+    container_name: astro-laucha

@@ -1,6 +1,19 @@
 ---
-import preview from '../../public/preview.jpg'
 import ReactIcon from '../components/icons/React.astro'
+import TypescriptIcon from '../components/icons/Typescript.astro'
+import StrapiIcon from '../components/icons/Strapi.astro'
+import ReduxIcon from '../components/icons/Redux.astro'
+import PhpIcon from '../components/icons/Php.astro'
+import MySQLIcon from '../components/icons/MySQL.astro'
+import GraphQLIcon from '../components/icons/GraphQL.astro'
+import NextIcon from '../components/icons/Next.astro'
+import TailwindIcon from '../components/icons/Tailwind.astro'
+import HtmlIcon from '../components/icons/Html.astro'
+import CssIcon from '../components/icons/Css.astro'
+import JavascriptIcon from '../components/icons/Javascript.astro'
+import ReactRouterIcon from '../components/icons/ReactRouter.astro'
+import MaterialUIIcon from '../components/icons/MaterialUI.astro'
+import CypressIcon from '../components/icons/Cypress.astro'
 import TagBadge from '../components/TagBadge.astro'
 
 const TAGS = {
@@ -8,66 +21,211 @@ const TAGS = {
     name: "React.js",
     icon: ReactIcon,
     class: "bg-slate-700",
+  },
+  TYPESCRIPT:{
+    name: "TypeScript",
+    icon: TypescriptIcon,
+    class: "bg-slate-700",
+  },
+  STRAPI:{
+    name: "Strapi",
+    icon: StrapiIcon,
+    class: "bg-slate-700",
+  },
+  REDUX:{
+    name: "Redux",
+    icon: ReduxIcon,
+    class: "bg-slate-700",
+  },
+  PHP:{
+    name: "Php",
+    icon: PhpIcon,
+    class: "bg-slate-700",
+  },
+  MYSQL:{
+    name: "MySQL",
+    icon: MySQLIcon,
+    class: "bg-slate-700",
+  },
+  GRAPHQL:{
+    name: "GraphQL",
+    icon: GraphQLIcon,
+    class: "bg-slate-700",
+  },
+  NEXT:{
+    name: "Next.js",
+    icon: NextIcon,
+    class: "bg-slate-700",
+  },
+  TAILWIND:{
+    name: "Tailwind.css",
+    icon: TailwindIcon,
+    class: "bg-slate-700",
+  },
+  HTML:{
+    name: "HTML",
+    icon: HtmlIcon,
+    class: "bg-slate-700",
+  },
+  CSS:{
+    name: "CSS",
+    icon: CssIcon,
+    class: "bg-slate-700",
+  },
+  JAVASCRIPT:{
+    name: "JAVASCRIPT",
+    icon: JavascriptIcon,
+    class: "bg-slate-700",
+  },
+  REACT_ROUTER:{
+    name: "React Router",
+    icon: ReactRouterIcon,
+    class: "bg-slate-700",
+  },
+  MATERIALUI:{
+    name: "MaterialUI",
+    icon: MaterialUIIcon,
+    class: "bg-slate-700",
+  },
+  CYPRESS:{
+    name: "Cypress",
+    icon: CypressIcon,
+    class: "bg-slate-700",
   }
 }
 
 const PROJECTS = [
   {
-    title: "Blog Personal",
-    description: "Un blog personal desarrollado con tecnologías modernas como React.js para el front-end y Node.js para el back-end. Incluye funcionalidades como autenticación de usuarios, comentarios y un panel de administración.",
-    image: "/preview.jpg",
-    // tags: [TAGS.REACT, "Node.js", "MongoDB", "CSS3"],
-    tags: [TAGS.REACT, TAGS.REACT],
-    link_to_demo: "https://www.example.com/blog-personal-demo",
-    link_to_repo: "https://github.com/tuusuario/blog-personal"
+    title: "Ecommerce",
+    description: "Desarrollé un ecommerce utilizando React con VITE como entorno de desarrollo. La aplicación permite a los usuarios navegar por diversas categorías de productos, filtrar por precio y tipo de producto, ordenar por precio, agregar productos al carrito y visualizarlo. El diseño es completamente receptivo, brindando una experiencia óptima en diferentes dispositivos.",
+    image: "/preview_1.png",
+    tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.STRAPI, TAGS.REDUX],
+    link_to_demo: "#",
+    link_to_repo: "https://github.com/TheLaucha/E-commerce-React-Strapi"
   },
   {
-    title: "Tienda en Línea",
-    description: "Una tienda en línea construida utilizando tecnologías de comercio electrónico como Shopify. Incluye características de carrito de compras, administración de inventario y pasarelas de pago integradas.",
-    image: "https://placehold.co/600x400",
-    tags: [TAGS.REACT, TAGS.REACT],
-    // tags: ["Shopify", "eCommerce", "HTML5", "CSS3"],
-    link_to_demo: "https://placehold.co/600x400",
-    link_to_repo: "https://github.com/tuusuario/tienda-en-linea"
+    title: "MENU DE COMIDAS DE UN RESTAURANTE",
+    description: "Desarrollé un sistema de menú de restaurante utilizando React para el frontend, Slim PHP para el backend y MySQL para la base de datos. El proyecto permite visualizar y filtrar distintas comidas, realizar pedidos, y gestionar platos.",
+    image: "/preview_2.png",
+    tags: [TAGS.REACT, TAGS.PHP, TAGS.MYSQL],
+    link_to_demo: "#",
+    link_to_repo: "https://github.com/TheLaucha/MENU_UNLP_FRONT"
   },
   {
-    title: "Portafolio Profesional",
-    description: "Un portafolio profesional desarrollado para mostrar habilidades y proyectos anteriores. Diseñado con un enfoque minimalista utilizando HTML, CSS y JavaScript para lograr una experiencia de usuario agradable.",
-    image: "https://placehold.co/600x400",
-    tags: [TAGS.REACT, TAGS.REACT],
-    // tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-    link_to_demo: "https://www.example.com/portafolio-demo",
-    link_to_repo: "https://github.com/tuusuario/portafolio-profesional"
+    title: "Blog tecnologico",
+    description: "Plataforma de blog con Next.js para el frontend y GraphCMS para la gestión de contenidos, junto con Tailwind para los estilos y SCSS para personalización. Permite la creación y categorización de posts, con funcionalidades de comentarios integradas.",
+    image: "/preview_3.png",
+    tags: [TAGS.NEXT, TAGS.GRAPHQL, TAGS.TAILWIND],
+    link_to_demo: "https://blog-next-graphcms.vercel.app/post/2d-array-in-java",
+    link_to_repo: "https://github.com/TheLaucha/blog_next_graphcms"
+  },
+  {
+    title: "Conversor de monedas",
+    description: "página web sencilla utilizando HTML, CSS y JavaScript. La página interactúa con una API para obtener datos en tiempo real sobre las tasas de cambio entre monedas fiat y cripto. A través de un formulario, los usuarios pueden seleccionar las monedas deseadas y visualizar instantáneamente sus valores convertidos",
+    image: "/preview_4.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    link_to_demo: "https://thelaucha.github.io/CryptoConverter/",
+    link_to_repo: "https://github.com/TheLaucha/CryptoConverter"
+  },
+  {
+    title: "Plataforma de recetas",
+    description: "Cree una plataforma de recetas con funciones que permiten a los usuarios buscar, obtener una vista previa y guardar sus recetas favoritas. Desarrollada con React, Material UI y CSS para una experiencia de usuario eficiente y estéticamente atractiva. Implementa React Router V6 para una navegación fluida entre las páginas.",
+    image: "/preview_5.png",
+    tags: [TAGS.REACT, TAGS.REACT_ROUTER, TAGS.MATERIALUI],
+    link_to_demo: "https://thelaucha.github.io/Recipe-app",
+    link_to_repo: "https://github.com/TheLaucha/Recipe-app"
+  },
+  {
+    title: "Juego Simon Dice",
+    description: "Desarrollé el juego clásico Simón Dice utilizando HTML, CSS y JavaScript, incorporando un contador de rondas para hacer un seguimiento del progreso del jugador, efectos de sonido que mejoran la experiencia auditiva, y tres niveles de dificultad para adaptarse a jugadores de diferentes habilidades.",
+    image: "/preview_6.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    link_to_demo: "https://thelaucha.github.io/simon-dice/",
+    link_to_repo: "https://github.com/TheLaucha/simon-dice"
+  },
+  {
+    title: "Juego Memotest",
+    description: "Desarrollé el clásico juego de memoria (Memotest) utilizando HTML, CSS y JavaScript, donde las tarjetas se cargan aleatoriamente para mantener el desafío. El juego incluye un sistema de puntos para recompensar la coincidencia de parejas. Además, implementé pruebas automatizadas con Cypress para garantizar la calidad y la funcionalidad del juego.",
+    image: "/preview_7.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.CYPRESS],
+    link_to_demo: "https://thelaucha.github.io/Memotest-rapero/",
+    link_to_repo: "https://github.com/TheLaucha/Memotest-rapero"
   }
 ];
 ---
 
-{
-  PROJECTS.map(project => {
-    const {title,description,image,tags,link_to_demo,link_to_repo} = project
-    return (
-      <article class="mt-12 flex flex-col gap-4">
-        <h3 class="text-sky-400 font-semibold text-xl">{title}</h3>  
-        <p class="text-pretty">{description}</p>
-        <ul class="flex">
-        {
-          tags.map(tag => {
-          return (
-            <li>
-              <TagBadge class={tag.class}>
-                <tag.icon class="size-4"></tag.icon>
-                {tag.name}
-              </TagBadge>  
-            </li>
-            )})
-        }  
-        </ul>
-        <img src={image} alt="Captura de pantalla del proyecto" class="rounded w-full">
-        <div class="flex gap-4">
-          <a href={link_to_demo} target="_blank" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">LIVE DEMO</a>  
-          <a href={link_to_repo} target="_blank" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none ">GITHUB REPO</a>  
-        </div>
-      </article>
-    )
-  })
-}
+<style>
+  .image-container img{
+    background-color: #003459;
+  }  
+</style>
+
+
+<div class="flex flex-col gap-4">
+  {
+    PROJECTS.map((project,i) => {
+      const {title,description,image,tags,link_to_demo,link_to_repo} = project
+      let esPar = i%2
+      let linkToDemoStyles = link_to_demo === "#" ? "text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none opacity-50 cursor-not-allowed" : "text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+      return (
+        esPar === 0 
+        ?  
+        <article class="flex flex-col mt-12 md:flex-row gap-4 w-full">
+          <div class="w-full md:w-5/6 flex items-center image-container">
+            <img src={image} alt="Captura de pantalla del proyecto" class="rounded w-full max-w-md lg:max-w-sm">
+          </div>
+          <div class="flex flex-col justify-between gap-4 w-full">
+            <h3 class="text-[#00a7e1] opacity-90 font-semibold text-xl">{title}</h3>  
+            <p class="text-pretty">{description}</p>
+            <ul class="flex">
+              {
+                tags.map(tag => {
+                return (
+                  <li>
+                    <TagBadge class={tag.class}>
+                      <tag.icon class="size-4"></tag.icon>
+                      {tag.name}
+                    </TagBadge>  
+                  </li>
+                  )})
+              }  
+            </ul>
+            <div class="flex gap-4">
+              <a href={link_to_demo === "#" ? null : link_to_demo} target="_blank" class={linkToDemoStyles}>LIVE DEMO</a>
+
+              <a href={link_to_repo} target="_blank" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">GITHUB REPO</a>  
+            </div>
+          </div>
+        </article>
+        : <article class="flex flex-col-reverse mt-12 md:flex-row gap-4 w-full">
+          <div class="flex flex-col justify-between gap-4 w-full">
+            <h3 class="text-[#00a7e1] opacity-90 font-semibold text-xl">{title}</h3>  
+            <p class="text-pretty">{description}</p>
+            <ul class="flex">
+              {
+                tags.map(tag => {
+                return (
+                  <li>
+                    <TagBadge class={tag.class}>
+                      <tag.icon class="size-4"></tag.icon>
+                      {tag.name}
+                    </TagBadge>  
+                  </li>
+                  )})
+              }  
+            </ul>
+            <div class="flex gap-4">
+              <a href={link_to_demo === "#" ? null : link_to_demo} target="_blank" class={linkToDemoStyles}>LIVE DEMO</a>
+
+              <a href={link_to_repo} target="_blank" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">GITHUB REPO</a>  
+            </div>
+          </div>
+          <div class="w-full md:w-5/6 flex items-center image-container ">
+            <img src={image} alt="Captura de pantalla del proyecto" class="rounded w-full max-w-md lg:max-w-sm">
+          </div>
+        </article>
+      )
+    })
+  }
+</div>
+

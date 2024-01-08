@@ -1,11 +1,71 @@
-<header class="flex flex-col gap-2 md:flex-row justify-between items-center py-3 px-5 w-full xl:w-[1120px] mx-auto ">
-  <img src="https://avatars.githubusercontent.com/u/47804695?v=4" alt="Navbar logo image" class="rounded-full w-12 h-12">
+<nav class="fixed w-full z-20 border-b shadow-xl">
+  <div class="flex items-center justify-between p-4 gap-4">
+    <a href="#top" class="flex items-center">
+      <img src="https://avatars.githubusercontent.com/u/47804695?v=4" class="size-12 rounded-full" alt="Lautaro espinillo Logo" />
+    </a>
+    <button data-collapse-toggle="navbar-default" aria-controls="navbar-default" aria-expanded="false" id="toggleBtn" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden ">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden md:flex">
+      <ul class="font-medium flex flex-row gap-4 text-white/90" id="ulContainer">
+        <li>
+          <a href="#top" class="hover:text-[#00a7e1] transition">Inicio</a>
+        </li>
+        <li>
+          <a href="#experiencia" class="hover:text-[#00a7e1] transition">Experiencia</a>
+        </li>
+        <li>
+          <a href="#proyectos" class="hover:text-[#00a7e1] transition" >Proyectos</a>
+        </li>
+        <li>
+          <a href="#sobre-mi" class="hover:text-[#00a7e1] transition">Sobre mi</a>
+        </li>
+        <li>
+          <a href="#habilidades" class="hover:text-[#00a7e1] transition">Habilidades</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="hidden flex min-w-full md:hidden" id="navbar-default">
+    <ul class="font-medium flex flex-col items-end flex-1 py-3 px-6 gap-4 md:p-0 text-white/90">
+      <li>
+        <a href="#top" class="hover:text-[#00a7e1] transition">Inicio</a>
+      </li>
+      <li>
+        <a href="#experiencia" class="hover:text-[#00a7e1] transition">Experiencia</a>
+      </li>
+      <li>
+        <a href="#proyectos" class="hover:text-[#00a7e1] transition">Proyectos</a>
+      </li>
+      <li>
+        <a href="#sobre-mi" class="hover:text-[#00a7e1]">Sobre mi</a>
+      </li>
+      <li>
+        <a href="#habilidades" class="hover:text-[#00a7e1]">Habilidades</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-  <nav class="flex flex-row gap-x-5 md:gap-x-10 ">
-    <a href="#top" class="hover:text-sky-400 transition">Inicio</a>
-    <a href="#experiencia" class="hover:text-sky-400 transition">Experiencia</a>
-    <a href="#proyectos" class="hover:text-sky-400 transition">Proyectos</a>
-    <a href="#sobre-mi" class="hover:text-sky-400 transition">Sobre mi</a>
-    <a href="#contacto" class="hover:text-sky-400 transition">Contacto</a>
-  </nav>
-</header>
+<style>
+  /* BACKGROUND */
+  nav{
+    /* BACKGROUND */
+		background-color: var(--blue-principal);
+		background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
+		background-blend-mode: color-dodge;
+  }
+</style>
+
+<script>
+  // JavaScript para mostrar/ocultar el menú en pantallas pequeñas
+  const toggleBtn = document.getElementById('toggleBtn');
+  const menu = document.getElementById('navbar-default');
+
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>

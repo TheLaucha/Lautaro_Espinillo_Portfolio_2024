@@ -5,25 +5,32 @@ import Badge from '../components/Badge.astro';
 import SocialPill from '../components/SocialPill.astro';
 import LinkedinIcon from '../components/icons/Linkedin.astro'
 import GithubIcon from '../components/icons/Github.astro'
+import PdfIcon from '../components/icons/Pdf.astro'
 import MailIcon from '../components/icons/Mail.astro'
 import BriefcaseIcon from '../components/icons/Briefcase.astro'
 import CodeIcon from '../components/icons/Code.astro'
+import SobreMiIcon from '../components/icons/SobreMi.astro'
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
 import SectionTitle from '../components/SectionTitle.astro';
+import SobreMi from '../components/SobreMi.astro';
+import Habilidades from '../components/Habilidades.astro';
 ---
 
 <Layout title="Portfolio Lautaro Espinillo - Desarrollador web">
 	<main class="px-4">
-		<SectionContainer class={"pt-24 pb-12 lg:pt-44 lg:pb-24"}>
-			<h1 class="text-white text-2xl md:text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">Hola! soy Lautaro 
+		<SectionContainer class={"pt-32 pb-12 lg:pt-44 lg:pb-24"}>
+			<h3 class="pb-4">Hola! mi nombre es</h3>
+			<h1 class="text-white text-2xl md:text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">
+				<span class="anton-font">Lautaro Espinillo</span>
 				<a href="https://www.linkedin.com/in/lautaro-espinillo" target="_blank" rel="noopener" class="flex items-center justify-center">
 					<Badge>Disponible para trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-lg lg:text-xl opacity-80 text-wrap">Desarrollador Web Full Stack. 
-				<span class="text-sky-400">De Buenos Aires, Argentina.</span> Especializado en crear soluciones personalizadas</h2>
+			<h2 class="text-white text-xl md:text-2xl lg:text-3xl font-bold flex flex-row gap-x-4 pb-4 anton-font">Desarrollador Web Full Stack</h2>
+			<h2 class="text-lg lg:text-xl opacity-80 text-wrap">Estudiante de la Lic en Informatica. 
+				<span class="text-[#00a7e1]">De Buenos Aires, Argentina.</span> Especializado en crear soluciones personalizadas. Estoy listo para contribuir y aprender en equipos innovadores.</h2>
 
 			<nav class="flex flex-row gap-4 mt-8 flex-wrap">
 					<SocialPill href="https://www.linkedin.com/in/lautaro-espinillo" >
@@ -31,15 +38,20 @@ import SectionTitle from '../components/SectionTitle.astro';
 						Linkedin
 					</SocialPill>
 					<SocialPill href="https://github.com/TheLaucha">
-						<GithubIcon class="size-4 lg:size-6" />
+						<GithubIcon class="size-5 lg:size-6" />
 						Github
 					</SocialPill>
 					<SocialPill id="btnEmail">
-						<MailIcon class="size-4 lg:size-6" />
+						<MailIcon class="size-5 lg:size-6" />
 						espinillo.lautaro@gmail.com
+					</SocialPill>
+					<SocialPill href="/CV.pdf">
+						<PdfIcon class="size-5 lg:size-6" />
+						CV &darr;
 					</SocialPill>
 			</nav>
 		</SectionContainer>
+		
 
 		<SectionContainer id="experiencia" class={"pt-24 pb-12"}>
 			<SectionTitle>
@@ -56,28 +68,47 @@ import SectionTitle from '../components/SectionTitle.astro';
 			</SectionTitle>
 			<Projects></Projects>
 		</SectionContainer>
+
+		<SectionContainer id="sobre-mi" class={"pt-24 pb-12"}>
+			<SectionTitle>
+				<SobreMiIcon class="size-7" />
+				Sobre mi
+			</SectionTitle>
+			<SobreMi></SobreMi>
+		</SectionContainer>
+
+		<SectionContainer id="habilidades" class={"pt-24 pb-12"}>
+			<SectionTitle>
+				<SobreMiIcon class="size-7" />
+				Habilidades
+			</SectionTitle>
+			<Habilidades></Habilidades>
+		</SectionContainer>
 	</main>
 </Layout>
 
 <script>
-	const btnEmail = document.querySelector('#btnEmail')
+	const btnEmail = document.querySelectorAll('#btnEmail')
 
-	btnEmail.addEventListener('click', copiarEmail)
+	btnEmail.forEach(el => el.addEventListener('click', () => copiarEmail(el)))
 
-	function copiarEmail(){
+	function copiarEmail(el){
+		console.log(el)
 		navigator.clipboard.writeText('espinillo.lautaro@gmail.com');
 		let spanItem = document.createElement("span")
-		spanItem.textContent = "Se ha copiado al portapapeles"
+		spanItem.textContent = "Copiado"
 		spanItem.className = "flex justify-center py-1 rounded-full border border-white/10 bg-white/5 transition"
 		spanItem.style.position = "absolute"
-		spanItem.style.left = "105%"
-		spanItem.style.top = "0%"
+		spanItem.style.left = "50%"
+		spanItem.style.transform = "translateX(-50%)"
+		spanItem.style.top = "115%"
 		spanItem.style.fontSize = "0.8rem"
-		spanItem.style.width = "100%"
-		btnEmail.appendChild(spanItem)
+		spanItem.style.width = "30%"
+		spanItem.style.margin = "0 auto"
+		el.appendChild(spanItem)
 
 		setTimeout(() => {
-			btnEmail.removeChild(spanItem)
+			el.removeChild(spanItem)
 		},1000)
 	}
 </script>

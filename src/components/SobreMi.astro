@@ -1,0 +1,42 @@
+---
+import SocialPill from "./SocialPill.astro";
+import Badge from '../components/Badge.astro';
+import LinkedinIcon from '../components/icons/Linkedin.astro'
+import GithubIcon from '../components/icons/Github.astro'
+import PdfIcon from '../components/icons/Pdf.astro'
+import MailIcon from '../components/icons/Mail.astro'
+
+---
+
+<article class="flex flex-col md:flex-row gap-4 w-full">
+  <div class="w-3/6 flex items-center image-container">
+    <img src="/profile.png" alt="" class="rounded-full">
+  </div>
+  <div class="flex flex-col justify-between gap-4 w-full">
+      <p class="md:text-xl">Hola! mi nombre es <span class=" text-[#00a7e1]/80">Lautaro Espinillo</span></p>
+      <p class="md:text-xl">Soy desarrollador web ubicado en <span class=" text-[#00a7e1]/80">Buenos aires</span></p>
+      <p class="md:text-xl">Actualmente estudiando la <span class=" text-[#00a7e1]/80">Licenciatura en Informatica</span></p>
+      <p class="md:text-xl">Busco oportunidades para aplicar mis habilidades como <span class=" text-[#00a7e1]/80">desarrollador</span> en un entorno profesional que fomente el aprendizaje y el crecimiento.</p>
+      <p class="md:text-xl">Soy conocido por mi <span class=" text-[#00a7e1]/80">perseverancia, organizacion y responsabilidad.</span></p>
+
+			<nav class="flex flex-row gap-4 flex-wrap">
+					<SocialPill href="https://www.linkedin.com/in/lautaro-espinillo" >
+						<LinkedinIcon class="size-4 lg:size-6" />
+						Linkedin
+					</SocialPill>
+					<SocialPill href="https://github.com/TheLaucha">
+						<GithubIcon class="size-5 lg:size-6" />
+						Github
+					</SocialPill>
+					<SocialPill id="btnEmail">
+						<MailIcon class="size-5 lg:size-6" />
+						espinillo.lautaro@gmail.com
+					</SocialPill>
+					<SocialPill href="/CV.pdf">
+						<PdfIcon class="size-5 lg:size-6" />
+						CV &darr;
+					</SocialPill>
+			</nav>
+  </div>
+</article>
+
